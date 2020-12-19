@@ -277,6 +277,7 @@ class ProductApiController extends Controller
         }
 
         if ($product->delete()) {
+            unlink(storage_path('app/public/images/' . $product->image_name));
             return response()->json([
                 'success' => true,
                 'message' => 'Deleted successfully'

@@ -80,11 +80,4 @@ class AuthApiController extends Controller
             ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
-
-    public function getAuthUser(Request $request)
-    {
-        $user = JWTAuth::authenticate($request->token);
-
-        return response()->json(['user' => $user]);
-    }
 }
