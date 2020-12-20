@@ -25,7 +25,11 @@
 
     php artisan key:generate
     
-## Step 5: Run the app
+## Step 5: Create laravel storage symbolic link
+
+    php artisan storage:link
+    
+## Step 6: Run the app
 
     php artisan serve
 
