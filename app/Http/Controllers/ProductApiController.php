@@ -28,7 +28,7 @@ class ProductApiController extends Controller
     {
         return $this->user
             ->products()
-            ->orderBy('id', 'DESC')
+            ->orderBy('updated_at', 'DESC')
             ->get(['id', 'title', 'description', 'price', 'image_name'])
             ->toArray();
     }
