@@ -28,7 +28,8 @@ class ProductApiController extends Controller
     {
         return $this->user
             ->products()
-            ->get(['title', 'description', 'price', 'image_name'])
+            ->orderBy('id', 'DESC')
+            ->get(['id', 'title', 'description', 'price', 'image_name'])
             ->toArray();
     }
 
@@ -53,7 +54,7 @@ class ProductApiController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required',
             'description' => 'required',
-            'price' => 'required|numeric|between:0,99.99',
+            'price' => 'required|numeric|between:0,999999999999.99',
             'image' => 'required|mimes:jpeg,png,jpg,gif,svg'
         ]);
 
@@ -201,7 +202,7 @@ class ProductApiController extends Controller
         $validation_fields = [
             'title' => 'required',
             'description' => 'required',
-            'price' => 'required|numeric|between:0,99.99'
+            'price' => 'required|numeric|between:0,999999999999.99'
         ];
 
         if ($request->hasFile('image')) {
