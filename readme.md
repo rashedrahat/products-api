@@ -21,8 +21,11 @@
 
     php artisan migrate
 
-## Step 4: Run the app
+## Step 4: Generate the application encryption key
+
+    php artisan key:generate
+    
+## Step 5: Run the app
 
     php artisan serve
-    
-Note: `http://127.0.0.1:8000` by visiting if you see something an exception `No application encryption key has been specified.` page at your browser then run the `php artisan key:generate` into your terminal. After this run the app again.
+
