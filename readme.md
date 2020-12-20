@@ -29,4 +29,4 @@
 
     php artisan serve
 
-**Note:** To see the structure and behaviours of the API endpoints you can import `products-api.json` file into any tool such as Postman, Talend API Tester, etc.
+**Note:** To see the structure and behaviour of the API endpoints you can import `products-api.json` file into any tool such as Postman, Talend API Tester, etc.
