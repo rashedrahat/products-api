@@ -29,3 +29,4 @@
 
     php artisan serve
 
+**Note:** You can test the API endpoints by importing `products-api.json` file into any tool such as Postman, Talend API Tester, etc.
